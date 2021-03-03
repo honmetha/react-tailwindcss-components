@@ -1,6 +1,8 @@
 import Head from "next/head";
+
 import styles from "../styles/Home.module.css";
-import SocialNetworks from '../components/SocialNetworks';
+import SocialNetworks from "../components/SocialNetworks";
+import NavigationBar from "../components/NavigationBar";
 
 export default function Home() {
   return (
@@ -10,6 +12,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
+      <NavigationBar />
       <main className={styles.main}>
         <h1 className={styles.title}>
           Welcome to <a href="https://nextjs.org">Next.js!</a>
@@ -52,7 +55,7 @@ export default function Home() {
       </main>
 
       <footer>
-      {/* <footer className={styles.footer}>
+        {/* <footer className={styles.footer}>
         <a
           href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
           target="_blank"
