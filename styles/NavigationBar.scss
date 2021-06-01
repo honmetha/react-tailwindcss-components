@@ -1,0 +1,39 @@
+.animated-arrow {
+  width: 1.25rem;
+  height: 1.25rem;
+  display: inline-block;
+  position: relative;
+  margin: 0 1rem;
+
+  span {
+    top: 0.9rem;
+    position: absolute;
+    width: 0.75rem;
+    height: 0.1rem;
+    background-color: black;
+    display: inline-block;
+    transition: all 0.2s ease;
+
+    &:first-of-type {
+      left: 0;
+      transform: rotate(45deg);
+    }
+
+    &:last-of-type {
+      right: 0;
+      transform: rotate(-45deg);
+    }
+  }
+
+  &:hover {
+    span {
+      &:first-of-type {
+        transform: rotate(-45deg);
+      }
+
+      &:last-of-type {
+        transform: rotate(45deg);
+      }
+    }
+  }
+}
