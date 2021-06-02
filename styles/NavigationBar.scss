@@ -1,3 +1,47 @@
+.mega-menu {
+  &:hover {
+    .animated-arrow span {
+      &:first-of-type {
+        transform: rotate(-45deg);
+      }
+
+      &:last-of-type {
+        transform: rotate(45deg);
+      }
+    }
+
+    .dropdown_menu li {
+      display: block;
+    }
+
+    .dropdown_menu-2 {
+      @for $i from 1 through 10 {
+        .dropdown_item-#{$i} {
+          transform-origin: top center;
+          animation-name: rotateX;
+          animation-duration: 200ms;
+          animation-delay: $i * 30ms;
+          animation-timing-function: ease-in-out;
+          animation-fill-mode: forwards;
+        }
+      }
+      @keyframes rotateX {
+        0% {
+          opacity: 0;
+          transform: rotateX(-90deg);
+        }
+        50% {
+          transform: rotateX(-20deg);
+        }
+        100% {
+          opacity: 1;
+          transform: rotateX(0deg);
+        }
+      }
+    }
+  }
+}
+
 .animated-arrow {
   width: 1.25rem;
   height: 1.25rem;
@@ -22,18 +66,6 @@
     &:last-of-type {
       right: 0;
       transform: rotate(-45deg);
-    }
-  }
-
-  &:hover {
-    span {
-      &:first-of-type {
-        transform: rotate(-45deg);
-      }
-
-      &:last-of-type {
-        transform: rotate(45deg);
-      }
     }
   }
 }
