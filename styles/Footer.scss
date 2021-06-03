@@ -1,0 +1,10 @@
+.footer-list {
+  max-height: 0;
+  transition: max-height 0.3s ease-out;
+  overflow: hidden;
+}
+
+.footer-expanded {
+  max-height: 500px;
+  transition: max-height 0.3s ease-in;
+}

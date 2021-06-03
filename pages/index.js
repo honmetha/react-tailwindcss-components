@@ -3,6 +3,7 @@ import Head from "next/head";
 import styles from "../styles/Home.module.css";
 import SocialNetworks from "../components/SocialNetworks";
 import NavigationBar from "../components/NavigationBar";
+import Footer from "../components/Footer";
 
 export default function Home() {
   return (
@@ -64,6 +65,7 @@ export default function Home() {
           Powered by{" "}
           <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
         </a> */}
+        <Footer />
         <SocialNetworks />
       </footer>
     </div>
