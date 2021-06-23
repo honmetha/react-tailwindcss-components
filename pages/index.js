@@ -4,6 +4,7 @@ import styles from "../styles/Home.module.css";
 import SocialNetworks from "../components/SocialNetworks";
 import NavigationBar from "../components/NavigationBar";
 import Footer from "../components/Footer";
+import Modal from "../components/Modal";
 
 export default function Home() {
   return (
@@ -53,6 +54,7 @@ export default function Home() {
             </p>
           </a>
         </div>
+        <Modal />
       </main>
 
       <footer>
