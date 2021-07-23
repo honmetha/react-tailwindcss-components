@@ -5,6 +5,7 @@ import SocialNetworks from "../components/SocialNetworks";
 import NavigationBar from "../components/NavigationBar";
 import Footer from "../components/Footer";
 import Modal from "../components/Modal";
+import InputField from "../components/InputField";
 
 export default function Home() {
   return (
@@ -55,6 +56,7 @@ export default function Home() {
           </a>
         </div>
         <Modal />
+        <InputField label="Test" />
       </main>
 
       <footer>
