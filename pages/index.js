@@ -6,6 +6,7 @@ import NavigationBar from "../components/NavigationBar";
 import Footer from "../components/Footer";
 import Modal from "../components/Modal";
 import InputField from "../components/InputField";
+import SelectMenu from "../components/SelectMenu";
 
 export default function Home() {
   return (
@@ -57,6 +58,7 @@ export default function Home() {
         </div>
         <Modal />
         <InputField label="Test" />
+        <SelectMenu label="Select Menu" options={["test1", "test2"]} />
       </main>
 
       <footer>
