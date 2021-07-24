@@ -58,7 +58,13 @@ export default function Home() {
         </div>
         <Modal />
         <InputField label="Test" />
-        <SelectMenu label="Select Menu" options={["test1", "test2"]} />
+        <SelectMenu
+          label="Select Menu"
+          options={[
+            { id: 1, text: "test1" },
+            { id: 2, text: "test2" },
+          ]}
+        />
       </main>
 
       <footer>
