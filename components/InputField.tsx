@@ -6,8 +6,10 @@ interface InputFieldProps {
   required?: boolean;
   name?: string;
   type?: string;
+  className?: string;
   error?: string;
   value?: string;
+  readOnly?: boolean;
   onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
@@ -17,8 +19,10 @@ const InputField = ({
   required = false,
   name,
   type = "text",
+  className,
   error,
   value,
+  readOnly = false,
   onChange,
 }: InputFieldProps) => {
   return (
@@ -29,10 +33,13 @@ const InputField = ({
         type={type}
         className={classNames(
           "px-4 py-2.5 mt-2 w-full h-10 border transition-colors duration-150 ease-in-out focus:outline-none lg:h-12",
-          { "focus:border-blue-500": !error },
-          { "border-red-500": error }
+          { "focus:border-blue-500": !error && !readOnly },
+          { "border-red-500": error },
+          { "cursor-default bg-gray-500": readOnly },
+          className
         )}
         value={value}
+        readOnly={readOnly}
         onChange={onChange}
       />
       <span className="text-red-500">{error}</span>
