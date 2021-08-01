@@ -6,7 +6,8 @@ interface InputFieldProps {
   required?: boolean;
   name?: string;
   type?: string;
-  className?: string;
+  extraClasses?: string;
+  maxLength?: number;
   error?: string;
   value?: string;
   readOnly?: boolean;
@@ -19,7 +20,8 @@ const InputField = ({
   required = false,
   name,
   type = "text",
-  className,
+  extraClasses,
+  maxLength,
   error,
   value,
   readOnly = false,
@@ -33,11 +35,12 @@ const InputField = ({
         type={type}
         className={classNames(
           "px-4 py-2.5 mt-2 w-full h-10 border transition-colors duration-150 ease-in-out focus:outline-none lg:h-12",
-          { "focus:border-blue-500": !error && !readOnly },
+          { "focus:border-true-v": !error && !readOnly },
           { "border-red-500": error },
-          { "cursor-default bg-gray-500": readOnly },
-          className
+          { "cursor-default bg-disabled-grey": readOnly },
+          extraClasses
         )}
+        maxLength={maxLength}
         value={value}
         readOnly={readOnly}
         onChange={onChange}
