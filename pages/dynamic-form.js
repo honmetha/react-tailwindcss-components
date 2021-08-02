@@ -2,6 +2,7 @@ import * as React from "react";
 import { v4 as uuidv4 } from "uuid";
 
 import InputField from "../components/InputField";
+import Slider from "../components/Slider";
 
 const DynamicForm = () => {
   const [inputFields, setInputFields] = React.useState([
@@ -50,6 +51,7 @@ const DynamicForm = () => {
           </div>
         ))}
         <button onClick={handleAddFields}>+</button>
+        <Slider min={0} max={300} />
       </form>
     </div>
   );

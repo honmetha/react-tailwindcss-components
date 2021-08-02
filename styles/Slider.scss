@@ -2,7 +2,7 @@
   -webkit-appearance: none;
   width: 100%;
   height: 3px;
-  background-color: rgba($true-v, 0.3);
+  background-color: rgba(turquoise, 0.3);
   outline: none;
 
   &::-webkit-slider-thumb {
@@ -10,14 +10,14 @@
     appearance: none;
     width: 18px;
     height: 18px;
-    background: $true-v;
+    background: turquoise;
     cursor: pointer;
   }
 
   &::-moz-range-thumb {
     width: 18px;
     height: 18px;
-    background: $true-v;
+    background: turquoise;
     cursor: pointer;
   }
 }
