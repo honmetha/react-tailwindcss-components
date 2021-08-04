@@ -61,8 +61,8 @@ export default function Home() {
         <SelectMenu
           label="Select Menu"
           options={[
-            { id: 1, text: "test1" },
-            { id: 2, text: "test2" },
+            { label: "Test 1", value: "test1" },
+            { label: "Test 2", value: "test2" },
           ]}
         />
       </main>

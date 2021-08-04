@@ -1,6 +1,9 @@
+import classNames from "classnames";
+
 interface SelectMenuProps {
   label?: string;
   labelClass?: string;
+  error?: string;
   required?: boolean;
   name?: string;
   value?: string;
@@ -9,14 +12,14 @@ interface SelectMenuProps {
 }
 
 interface IOptions {
-  id: number;
   value: string;
-  text: string;
+  label: string;
 }
 
 const SelectMenu = ({
   label,
   labelClass,
+  error,
   required = false,
   name,
   value,
@@ -29,15 +32,21 @@ const SelectMenu = ({
       <select
         name={name}
         value={value}
-        className="px-4 py-2.5 mt-2 w-full h-10 border transition-colors duration-150 ease-in-out focus:outline-none focus:border-blue-500 lg:h-12"
+        className={classNames(
+          "px-4 py-2.5 mt-2 w-full h-10 border transition-colors duration-150 ease-in-out focus:outline-none lg:h-12",
+          { "focus:border-true-v": !error },
+          { "border-red-500": error }
+        )}
         onChange={onChange}
       >
-        {options.map((option) => (
-          <option key={option.id} value={option.value}>
-            {option.text}
+        <option value="">Please select</option>
+        {options.map((option, index) => (
+          <option key={index} value={option.value}>
+            {option.label}
           </option>
         ))}
       </select>
+      <span className="text-red-500">{error}</span>
     </label>
   );
 };
