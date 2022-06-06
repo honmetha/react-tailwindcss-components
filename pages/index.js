@@ -7,6 +7,7 @@ import Footer from "../components/Footer";
 import Modal from "../components/Modal";
 import InputField from "../components/InputField";
 import SelectMenu from "../components/SelectMenu";
+import CustomSelect from "../components/CustomSelect";
 
 export default function Home() {
   return (
@@ -60,6 +61,13 @@ export default function Home() {
         <InputField label="Test" />
         <SelectMenu
           label="Select Menu"
+          options={[
+            { label: "Test 1", value: "test1" },
+            { label: "Test 2", value: "test2" },
+          ]}
+        />
+        <CustomSelect
+          placeholder="this is placeholder"
           options={[
             { label: "Test 1", value: "test1" },
             { label: "Test 2", value: "test2" },
